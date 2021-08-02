@@ -14,3 +14,21 @@ function every(arr=[],cb){
 
 
    console.log( every([2,4,6,8],evenNumbers))
+   function some(arr=[],cb){
+    for (let i = 0; i < arr.length; i++) {
+          if (cb(arr[i]) ) {
+            return true;
+          }
+      
+    }
+    return false
+    
+  }
+
+
+   function evenNumbers(number){
+      return number%2===0;
+  }
+
+
+  console.log( some([9],evenNumbers))
